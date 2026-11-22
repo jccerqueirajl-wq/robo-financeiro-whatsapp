@@ -1,4 +1,4 @@
-@"
+
 # Robô Financeiro no WhatsApp
 
 > Assistente de WhatsApp para pequenos empresários gerenciarem pagamentos, recebimentos via Pix e atualizações de planilhas por mensagens simples.
@@ -19,4 +19,3 @@ Facilitar o controle de fluxo de caixa diário sem precisar abrir o computador a
 ## 📁 Estrutura do Projeto
 - \`src/\`: Código-fonte principal do robô, interpretador de comandos e integração com planilhas.
 - \`data/\`: Diretório local de armazenamento das planilhas de teste.
-"@ | Out-File -Encoding utf8 README.md
