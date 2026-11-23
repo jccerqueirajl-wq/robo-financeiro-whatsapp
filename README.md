@@ -1,4 +1,4 @@
-@"
+
 # Robô Financeiro no WhatsApp
 
 > Assistente de WhatsApp para pequenos empresários gerenciarem pagamentos, recebimentos via Pix e atualizações de planilhas por mensagens simples.
