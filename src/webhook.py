@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿from http.server import BaseHTTPRequestHandler, HTTPServer
 import json
 from pathlib import Path
@@ -71,3 +72,29 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+=======
+from fastapi import FastAPI
+from pydantic import BaseModel
+
+from src.service import processar_mensagem
+
+app = FastAPI(title="Robô Financeiro Webhook")
+
+
+class MensagemEntrada(BaseModel):
+    mensagem: str
+    remetente: str | None = "whatsapp-simulado"
+
+
+@app.post("/webhook/whatsapp")
+def receber_mensagem(payload: MensagemEntrada) -> dict:
+    resposta, encerrar = processar_mensagem(
+        payload.mensagem,
+        remetente=payload.remetente,
+    )
+    return {
+        "remetente": payload.remetente,
+        "resposta": resposta,
+        "encerrar": encerrar,
+    }
+>>>>>>> 561b95c3dde2b9b41385781f7891dfa9d9d358b9
